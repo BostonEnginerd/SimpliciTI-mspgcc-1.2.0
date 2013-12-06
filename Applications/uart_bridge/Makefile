@@ -3,9 +3,9 @@
 NAME     = UART_Bridge
 SOURCE   = main_UART_Bridge
 DEPS     = SimpliciTI.dep
-CPU      = msp430g2553
+CPU      = msp430f2274
 RF       = -DMRFI_CC2500
-BOARD    = LAUNCHPADG2553
+BOARD    = EZ430RF
 
 SIMPLICITI_COMPONENTS_PATH = ../../Components
 BSP_PATH     = ${SIMPLICITI_COMPONENTS_PATH}/bsp

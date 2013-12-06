@@ -44,7 +44,7 @@
 #include "nwk_api.h"
 #include "bsp_leds.h"
 #include "bsp_buttons.h"
-
+#include <msp430.h>
 //#include "app_remap_led.h"
 
 static void linkFrom(void);

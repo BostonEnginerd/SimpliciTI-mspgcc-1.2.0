@@ -14,7 +14,7 @@ OBJECTS  = mrfi.o bsp.o nwk_api.o            			\
 	   nwk_security.o nwk_QMgmt.o 
 
 DEPS     = main_LinkListen.dep
-CPU      = msp430g2553
+CPU      = msp430f2274
 INCLUDES = -I${MRFI_PATH}/         		\
 	   -I${BSP_PATH}/                  	\
 	   -I${BSP_PATH}/drivers/          	\
@@ -23,7 +23,7 @@ INCLUDES = -I${MRFI_PATH}/         		\
 	   -I${NWK_SIM_PATH}/       	   	\
 	   -I${NWK_APP_PATH}/
 RF       = -DMRFI_CC2500
-BOARD    = LAUNCHPADG2553
+BOARD    = EZ430RF
 
 #configuration de l'application
 SMPL_NWK_CONFIG  += -DMAX_APP_PAYLOAD=10
@@ -39,7 +39,7 @@ SMPL_NWK_CONFIG  += -DSIZE_OUTFRAME_Q=2
 SMPL_NWK_CONFIG  += -DTHIS_DEVICE_ADDRESS="{0x79, 0x56, 0x34, 0x12}" 
 #SMPL_NWK_CONFIG  += -DSW_TIMER
 
-CFLAGS   = ${RF} ${SMPL_NWK_CONFIG} -mmcu=${CPU} -O2 -Wall -g ${INCLUDES} 
+CFLAGS   = ${RF} ${SMPL_NWK_CONFIG} -mmcu=${CPU} -O2 -Wall -Wimplicit-function-declaration -g ${INCLUDES} 
 
 #switch the compiler (for the internal make rules)
 CC       = msp430-gcc

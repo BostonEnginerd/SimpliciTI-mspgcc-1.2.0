@@ -37,6 +37,8 @@
 /******************************************************************************
  * INCLUDES
  */
+
+
 #ifndef __GNUC__ // it seems string.h is included only for NULL. Replace by conditional NULL definition
 #include <string.h>
 #else

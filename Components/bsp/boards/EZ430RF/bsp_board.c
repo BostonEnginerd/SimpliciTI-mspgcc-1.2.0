@@ -79,7 +79,7 @@ static uint8_t sIterationsPerUsec = 0;
  * @return      0 - don't intialize data segments / 1 - do initialization
  **************************************************************************************************
 */
-BSP_EARLY_INIT(void)
+int BSP_EARLY_INIT(void)
 {
   /* Disable watchdog timer */
   WDTCTL = WDTPW | WDTHOLD;
